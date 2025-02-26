@@ -1,0 +1,19 @@
+<div class="bg-white p-6 rounded-xl border border-gray-200">
+  <div class="flex items-center justify-between">
+    <div>
+      <p class="text-sm font-medium text-gray-600">{{ title }}</p>
+      <h3 class="text-2xl font-semibold text-gray-900 mt-1">{{ value }}</h3>
+      <p
+        *ngIf="trend"
+        class="text-sm mt-2"
+        [class.text-green-600]="trendUp"
+        [class.text-red-600]="!trendUp"
+      >
+        {{ trend }}
+      </p>
+    </div>
+    <div class="p-3 bg-gray-50 rounded-lg">
+      <i [class]="'w-6 h-6 ' + iconName + ' ' + iconColor"></i>
+    </div>
+  </div>
+</div>

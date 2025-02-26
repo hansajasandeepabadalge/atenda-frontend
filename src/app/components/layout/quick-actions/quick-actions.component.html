@@ -1,0 +1,14 @@
+<div class="bg-white rounded-xl border border-gray-200 p-6">
+  <h2 class="text-lg font-semibold text-gray-900 mb-4">
+    Quick Actions
+  </h2>
+  <div class="grid grid-cols-3 gap-4">
+    <button
+      *ngFor="let action of actions"
+      class="flex flex-col items-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100"
+    >
+      <i [class]="'w-6 h-6 text-blue-500 ' + action.icon"></i>
+      <span class="mt-2 text-sm text-gray-700">{{ action.label }}</span>
+    </button>
+  </div>
+</div>

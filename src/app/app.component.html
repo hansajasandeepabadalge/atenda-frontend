@@ -1,3 +1,53 @@
-<h1 class="text-3xl font-bold underline">
-  Hello world!
-</h1>
+<div class="flex min-h-screen bg-gray-50">
+  <app-sidebar></app-sidebar>
+  <div class="flex-1">
+    <app-header></app-header>
+    <main class="p-6">
+      <h1 class="text-2xl font-semibold text-gray-900 mb-6">
+        Dashboard Overview
+      </h1>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+        <app-stats-card
+          title="Total Students"
+          value="2,845"
+          iconName="users"
+          iconColor="text-blue-500"
+          trend="+12% from last month"
+          [trendUp]="true">
+        </app-stats-card>
+
+        <app-stats-card
+          title="Total Teachers"
+          value="182"
+          iconName="graduation-cap"
+          iconColor="text-green-500">
+        </app-stats-card>
+
+        <app-stats-card
+          title="Upcoming Events"
+          value="8"
+          iconName="calendar"
+          iconColor="text-purple-500">
+        </app-stats-card>
+
+        <app-stats-card
+          title="Pending Fees"
+          value="$24,500"
+          iconName="credit-card"
+          iconColor="text-red-500"
+          trend="15 students pending"
+          [trendUp]="false">
+        </app-stats-card>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div class="lg:col-span-2">
+          <app-quick-actions></app-quick-actions>
+        </div>
+        <div>
+          <app-activity-feed></app-activity-feed>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>

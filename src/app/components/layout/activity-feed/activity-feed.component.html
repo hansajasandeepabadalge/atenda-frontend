@@ -1,0 +1,18 @@
+<div class="bg-white rounded-xl border border-gray-200 p-6">
+  <h2 class="text-lg font-semibold text-gray-900 mb-4">
+    Recent Activities
+  </h2>
+  <div class="space-y-4">
+    <div
+      *ngFor="let activity of activities"
+      class="flex items-start gap-4"
+    >
+      <div class="w-2 h-2 mt-2 rounded-full bg-blue-500"></div>
+      <div>
+        <p class="text-sm text-gray-900">{{ activity.action }}</p>
+        <p class="text-sm text-gray-500">{{ activity.name }}</p>
+        <p class="text-xs text-gray-400 mt-1">{{ activity.time }}</p>
+      </div>
+    </div>
+  </div>
+</div>
